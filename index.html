@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>合作项目介绍 · 手机窄屏</title>
+  <style>
+    /* 全局重置，强制窄屏容器 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      background: #e8e4dc; /* 外围中性色，凸显卡片 */
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 0 4px;        /* 极窄边缘留白，避免贴边 */
+      font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    }
+    /* 强制窄屏容器 —— 永远375px，若屏幕小于375则100% */
+    .phone-frame {
+      width: 100%;
+      max-width: 375px;       /* 强制最窄手机宽度 */
+      margin: 0 auto;
+      background: #FFFFFF;    /* 基础底色，实际区块会覆盖 */
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.08); /* 轻微阴影，区分卡片 */
+      border-radius: 0;       /* 保持方正，更像手机截图 */
+      overflow: hidden;       /* 防止圆角溢出，但内部无圆角溢出问题 */
+      transition: all 0.1s;
+    }
+    /* 确保内部所有元素宽度不超出容器 */
+    .phone-frame img, .phone-frame div, .phone-frame a {
+      max-width: 100%;
+    }
+    /* 覆盖原有内联样式的某些强制宽度（避免溢出） */
+    .phone-frame [style*="width:100%"] {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    /* 但保留原有的padding和内部布局 */
+    /* 让滚动条不影响内部布局 */
+    .phone-frame ::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+    /* 微调，避免内部固定像素宽度导致溢出（比如图标等） */
+    .phone-frame .no-overflow {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <!-- 整个内容包裹在窄屏容器内 -->
+  <div class="phone-frame">
+    <!-- ========== 原始内容（完全保留，仅移除根元素宽度依赖） ========== -->
+    <div style="position:relative;width:100%;background-image:url('https://你的图床链接.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;overflow:hidden;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(107,5,8,0.9) 0%,rgba(148,7,10,0.78) 45%,rgba(74,2,4,0.92) 100%);z-index:1"></div>
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 45%,transparent 20%,rgba(0,0,0,0.5) 100%);z-index:1"></div>
+      <div style="position:relative;z-index:2;padding:28px 20px 20px;text-align:center;box-sizing:border-box">
+        <div style="display:inline-block;padding:4px 14px;border:1px solid rgba(201,169,97,0.7);border-radius:50px;font-size:9px;letter-spacing:2px;color:#E5D4A8;margin-bottom:14px;background:rgba(0,0,0,0.3)">PKU · NSD · 合作项目 · 2027</div>
+        <div style="font-size:16px;font-weight:600;letter-spacing:1px;line-height:1.45;color:#FFFFFF;margin-bottom:4px;text-shadow:0 2px 12px rgba(0,0,0,0.75)">2027年北京大学国家发展研究院</div>
+        <div style="font-size:18px;font-weight:600;letter-spacing:1px;line-height:1.45;color:#FFFFFF;margin-bottom:10px;text-shadow:0 2px 12px rgba(0,0,0,0.75)">校外经济学辅修合作项目</div>
+        <div style="display:inline-block;border-top:1px solid rgba(201,169,97,0.55);border-bottom:1px solid rgba(201,169,97,0.55);padding:8px 18px;margin-bottom:12px">
+          <div style="font-size:10px;letter-spacing:5px;color:rgba(229,212,168,0.9);margin-bottom:5px">招 生 介 绍</div>
+          <div style="font-size:12px;letter-spacing:1.5px;line-height:1.6;color:#E5D4A8">名校资源 × 合作平台</div>
+          <div style="font-size:12px;letter-spacing:1.5px;line-height:1.6;color:#E5D4A8">共育经济学人才</div>
+        </div>
+      </div>
+      <div style="position:relative;z-index:2;padding-bottom:14px;text-align:center;color:rgba(229,212,168,0.75);font-size:9px;letter-spacing:3px">SCROLL ↓</div>
+    </div>
+    <div style="width:100%;background:#FAF8F3;padding:36px 18px 32px;box-sizing:border-box;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <div style="text-align:center;margin-bottom:24px">
+        <div style="font-family:Georgia,serif;font-size:10px;letter-spacing:4px;color:#C9A961;margin-bottom:6px">01 / ABOUT</div>
+        <div style="font-size:20px;font-weight:600;letter-spacing:2px;color:#94070A;display:inline-block;padding-bottom:8px;border-bottom:2px solid #C9A961">学院简介</div>
+        <div style="font-size:10px;letter-spacing:2px;color:#6B6B6B;margin-top:8px">三十载学术积淀 · 中国高校智库标杆</div>
+      </div>
+      <div style="position:relative;width:100%;height:180px;background:linear-gradient(135deg,#94070A 0%,#6B0508 60%,#4A0204 100%);border-radius:10px;overflow:hidden;box-shadow:0 12px 30px rgba(107,5,8,0.22);margin-bottom:14px">
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px);background-size:26px 26px"></div>
+        <div style="position:absolute;top:-40%;right:-25%;width:70%;height:140%;border-radius:50%;background:radial-gradient(circle,rgba(201,169,97,0.4),transparent 70%)"></div>
+        <div style="position:absolute;top:20px;left:20px;font-size:14px;letter-spacing:5px;color:#E5D4A8;font-weight:600">北京大学</div>
+        <div style="position:absolute;top:44px;left:20px;font-size:9px;letter-spacing:3px;color:rgba(229,212,168,0.7)">PEKING UNIVERSITY</div>
+        <div style="position:absolute;bottom:14px;right:18px;font-family:Georgia,serif;font-size:52px;font-weight:700;letter-spacing:2px;color:rgba(201,169,97,0.4);line-height:1">NSD</div>
+        <div style="position:absolute;bottom:64px;right:20px;font-size:9px;letter-spacing:3px;color:rgba(229,212,168,0.65)">SINCE 1994</div>
+        <div style="position:absolute;bottom:58px;left:20px;right:20px;height:1px;background:linear-gradient(90deg,rgba(201,169,97,0.7),transparent)"></div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:8px;padding:14px 18px;border-left:3px solid #94070A;box-shadow:0 6px 18px rgba(0,0,0,0.05);margin-bottom:20px;display:flex;align-items:center">
+        <div style="flex-shrink:0">
+          <div style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:#94070A;line-height:1;letter-spacing:1px">
+            30
+            <span style="font-size:15px">+</span>
+          </div>
+          <div style="font-size:8px;letter-spacing:1.5px;color:#6B6B6B;margin-top:4px">
+            YEARS OF
+            <br>
+            EXCELLENCE
+          </div>
+        </div>
+        <div style="margin-left:16px;padding-left:16px;border-left:1px solid #E5E0D5;font-size:11px;line-height:1.7;color:#4A4A4A">中国高校最具影响力的智库之一，汇聚林毅夫、周其仁、姚洋等一批享誉国内外的经济学家。</div>
+      </div>
+      <div style="font-size:13px;line-height:1.9;color:#4A4A4A;margin-bottom:24px">
+        <div style="font-size:13px;font-weight:600;color:#94070A;letter-spacing:1px;margin-bottom:10px;padding-left:10px;border-left:3px solid #C9A961">国家发展研究院（NSD）</div>
+        <p style="margin:0 0 12px 0;text-align:justify">北京大学国家发展研究院（National School of Development，简称 NSD）是北京大学以经济学为基础的多学科综合性学院，前身为林毅夫等六位海归经济学博士于 1994 年创立的北京大学中国经济研究中心（CCER）。随着师资队伍壮大及科研、教学领域拓展，2008 年更名为国家发展研究院。</p>
+        <p style="margin:0;text-align:justify">国发院长期深耕经济学研究与人才培养，秉持严谨求真、经世致用的学术理念，将扎实的理论研究与对中国发展现实问题的关注紧密结合。在这里，学习经济学不仅是掌握一套理论与方法，更是培养理解经济运行、观察社会变化、分析现实问题的能力。</p>
+      </div>
+      <div style="padding:20px 12px;background:#FFFFFF;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+        <div style="text-align:center;font-size:11px;letter-spacing:4px;color:#94070A;font-weight:600;margin-bottom:20px">— 发 展 历 程 —</div>
+        <div style="position:relative;padding:0 4px">
+          <div style="position:absolute;top:9px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,#C9A961 20%,#C9A961 80%,transparent)"></div>
+          <div style="display:flex;justify-content:space-between;position:relative">
+            <div style="flex:1;text-align:center;padding:0 2px">
+              <div style="font-family:Georgia,serif;font-size:12px;font-weight:700;color:#94070A;margin-bottom:5px">1994</div>
+              <div style="width: 10px; height: 10px; background: rgb(255, 255, 255); border: 2px solid rgb(148, 7, 10); border-radius: 50%; margin: 0px auto 8px; box-shadow: rgba(148, 7, 10, 0.1) 0px 0px 0px 2px; position: relative; max-width: 100%;">
+                <div style="position: absolute; top: 1.5px; left: 1.5px; width: 3px; height: 3px; background: rgb(201, 169, 97); border-radius: 50%; max-width: 100%;"></div>
+              </div>
+              <div style="font-size:9px;line-height:1.4;color:#4A4A4A">
+                中国经济
+                <br>
+                研究中心成立
+              </div>
+            </div>
+            <div style="flex:1;text-align:center;padding:0 2px">
+              <div style="font-family:Georgia,serif;font-size:12px;font-weight:700;color:#94070A;margin-bottom:5px">2008</div>
+              <div style="width: 10px; height: 10px; background: rgb(255, 255, 255); border: 2px solid rgb(148, 7, 10); border-radius: 50%; margin: 0px auto 8px; box-shadow: rgba(148, 7, 10, 0.1) 0px 0px 0px 2px; position: relative; max-width: 100%;">
+                <div style="position: absolute; top: 1.5px; left: 1.5px; width: 3px; height: 3px; background: rgb(201, 169, 97); border-radius: 50%; max-width: 100%;"></div>
+              </div>
+              <div style="font-size:9px;line-height:1.4;color:#4A4A4A">
+                更名为
+                <br>
+                国家发展研究院
+              </div>
+            </div>
+            <div style="flex:1;text-align:center;padding:0 2px">
+              <div style="font-family:Georgia,serif;font-size:12px;font-weight:700;color:#94070A;margin-bottom:5px">2016</div>
+              <div style="width: 10px; height: 10px; background: rgb(255, 255, 255); border: 2px solid rgb(148, 7, 10); border-radius: 50%; margin: 0px auto 8px; box-shadow: rgba(148, 7, 10, 0.1) 0px 0px 0px 2px; position: relative; max-width: 100%;">
+                <div style="position: absolute; top: 1.5px; left: 1.5px; width: 3px; height: 3px; background: rgb(201, 169, 97); border-radius: 50%; max-width: 100%;"></div>
+              </div>
+              <div style="font-size:9px;line-height:1.4;color:#4A4A4A">
+                南南合作与
+                <br>
+                发展学院成立
+              </div>
+            </div>
+            <div style="flex:1;text-align:center;padding:0 2px">
+              <div style="font-family:Georgia,serif;font-size:12px;font-weight:700;color:#94070A;margin-bottom:5px">2024</div>
+              <div style="width: 10px; height: 10px; background: rgb(255, 255, 255); border: 2px solid rgb(148, 7, 10); border-radius: 50%; margin: 0px auto 8px; box-shadow: rgba(148, 7, 10, 0.1) 0px 0px 0px 2px; position: relative; max-width: 100%;">
+                <div style="position: absolute; top: 1.5px; left: 1.5px; width: 3px; height: 3px; background: rgb(201, 169, 97); border-radius: 50%; max-width: 100%;"></div>
+              </div>
+              <div style="font-size:9px;line-height:1.4;color:#4A4A4A">
+                建院三十
+                <br>
+                周年新起点
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width:100%;background:#F2EDE3;padding:36px 18px 32px;box-sizing:border-box;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <div style="text-align:center;margin-bottom:24px">
+        <div style="font-family:Georgia,serif;font-size:10px;letter-spacing:4px;color:#C9A961;margin-bottom:6px">02 / PROGRAM</div>
+        <div style="font-size:20px;font-weight:600;letter-spacing:2px;color:#94070A;display:inline-block;padding-bottom:8px;border-bottom:2px solid #C9A961">项目介绍</div>
+        <div style="font-size:10px;letter-spacing:2px;color:#6B6B6B;margin-top:8px">近三十年项目沿革 · 一脉相承的教学积淀</div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:20px 12px 18px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:18px">
+        <div style="text-align:center;font-size:11px;letter-spacing:4px;color:#94070A;font-weight:600;margin-bottom:20px">— 项 目 沿 革 —</div>
+        <div style="position:relative;padding:0 4px">
+          <div style="position:absolute;top:9px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,transparent,#C9A961 20%,#C9A961 80%,transparent)"></div>
+          <div style="display:flex;justify-content:space-between;position:relative">
+            <div style="flex:1;text-align:center;padding:0 4px">
+              <div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#94070A;margin-bottom:5px;letter-spacing:1px">1996</div>
+              <div style="width: 11px; height: 11px; background: rgb(255, 255, 255); border: 2px solid rgb(148, 7, 10); border-radius: 50%; margin: 0px auto 10px; box-shadow: rgba(148, 7, 10, 0.1) 0px 0px 0px 2px; position: relative; max-width: 100%;">
+                <div style="position: absolute; top: 2px; left: 2px; width: 3px; height: 3px; background: rgb(201, 169, 97); border-radius: 50%; max-width: 100%;"></div>
+              </div>
+              <div style="font-size:10px;line-height:1.5;color:#4A4A4A;font-weight:500">
+                经济学双学位
+                <br>
+                项目创办
+              </div>
+            </div>
+            <div style="flex:1;text-align:center;padding:0 4px">
+              <div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#94070A;margin-bottom:5px;letter-spacing:1px">2003</div>
+              <div style="width: 11px; height: 11px; background: rgb(255, 255, 255); border: 2px solid rgb(148, 7, 10); border-radius: 50%; margin: 0px auto 10px; box-shadow: rgba(148, 7, 10, 0.1) 0px 0px 0px 2px; position: relative; max-width: 100%;">
+                <div style="position: absolute; top: 2px; left: 2px; width: 3px; height: 3px; background: rgb(201, 169, 97); border-radius: 50%; max-width: 100%;"></div>
+              </div>
+              <div style="font-size:10px;line-height:1.5;color:#4A4A4A;font-weight:500">
+                招收校外在读
+                <br>
+                本科生及毕业生
+              </div>
+            </div>
+            <div style="flex:1;text-align:center;padding:0 4px">
+              <div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#94070A;margin-bottom:5px;letter-spacing:1px">2022</div>
+              <div style="width: 11px; height: 11px; background: rgb(255, 255, 255); border: 2px solid rgb(148, 7, 10); border-radius: 50%; margin: 0px auto 10px; box-shadow: rgba(148, 7, 10, 0.1) 0px 0px 0px 2px; position: relative; max-width: 100%;">
+                <div style="position: absolute; top: 2px; left: 2px; width: 3px; height: 3px; background: rgb(201, 169, 97); border-radius: 50%; max-width: 100%;"></div>
+              </div>
+              <div style="font-size:10px;line-height:1.5;color:#4A4A4A;font-weight:500">
+                调整为校外
+                <br>
+                经济学辅修项目
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:16px 18px;border-left:3px solid #94070A;box-shadow:0 4px 14px rgba(0,0,0,0.04);margin-bottom:10px">
+        <div style="display:flex;align-items:center;margin-bottom:8px">
+          <div style="width: 22px; height: 22px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-right: 10px; max-width: 100%;">01</div>
+          <div style="font-size:13px;font-weight:600;color:#94070A;letter-spacing:1px">项目起源</div>
+        </div>
+        <p style="margin:0;font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">北京大学国家发展研究院经济学双学位项目创办于 1996 年，凭借系统的课程设置、优秀的师资队伍与规范的教学服务，受到北大校内外学生的广泛关注。</p>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:16px 18px;border-left:3px solid #94070A;box-shadow:0 4px 14px rgba(0,0,0,0.04);margin-bottom:10px">
+        <div style="display:flex;align-items:center;margin-bottom:8px">
+          <div style="width: 22px; height: 22px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-right: 10px; max-width: 100%;">02</div>
+          <div style="font-size:13px;font-weight:600;color:#94070A;letter-spacing:1px">面向校外开放</div>
+        </div>
+        <p style="margin:0;font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">2003 年秋季起，为满足校外非经济学专业学生学习经济学的需求，经北京大学批准，项目开始招收校外在读本科生及本科毕业生修读。</p>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:16px 18px;border-left:3px solid #94070A;box-shadow:0 4px 14px rgba(0,0,0,0.04);margin-bottom:16px">
+        <div style="display:flex;align-items:center;margin-bottom:8px">
+          <div style="width: 22px; height: 22px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-right: 10px; max-width: 100%;">03</div>
+          <div style="font-size:13px;font-weight:600;color:#94070A;letter-spacing:1px">项目调整</div>
+        </div>
+        <p style="margin:0;font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">
+          根据教育部相关规定，国发院停止原经济学校外双学位招生，并自 2022 年起将项目调整为
+          <strong style="color:#94070A;font-weight:600">北京大学校外经济学辅修项目</strong>
+          。
+        </p>
+      </div>
+      <div style="position:relative;background:linear-gradient(135deg,#94070A 0%,#6B0508 100%);border-radius:10px;padding:20px 20px 18px;overflow:hidden;box-shadow:0 12px 30px rgba(107,5,8,0.22)">
+        <div style="position:absolute;top:-50%;right:-20%;width:70%;height:180%;border-radius:50%;background:radial-gradient(circle,rgba(201,169,97,0.35),transparent 70%)"></div>
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:24px 24px"></div>
+        <div style="position:relative;z-index:1">
+          <div style="display:inline-block;padding:3px 10px;border:1px solid rgba(201,169,97,0.7);border-radius:50px;font-size:9px;letter-spacing:3px;color:#E5D4A8;margin-bottom:12px">本 合 作 项 目</div>
+          <div style="font-size:14px;font-weight:600;letter-spacing:1px;color:#FFFFFF;margin-bottom:10px;line-height:1.5">依托北京大学校外经济学辅修项目开展</div>
+          <div style="width: 36px; height: 2px; background: rgb(201, 169, 97); margin-bottom: 12px; max-width: 100%;"></div>
+          <p style="margin:0;font-size:12.5px;line-height:1.9;color:rgba(255,255,255,0.92);text-align:justify">延续长期积累的教学经验，为希望拓展知识结构、系统学习经济学的校外学子提供学习机会。课程注重经济学基础理论与现实应用相结合，帮助同学逐步建立经济学知识框架，在原有专业背景之上，增添理解行业与社会的经济学视角。</p>
+        </div>
+      </div>
+    </div>
+    <div style="width:100%;background:#FAF8F3;padding:36px 18px 32px;box-sizing:border-box;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <div style="text-align:center;margin-bottom:24px">
+        <div style="font-family:Georgia,serif;font-size:10px;letter-spacing:4px;color:#C9A961;margin-bottom:6px">03 / ELIGIBILITY</div>
+        <div style="font-size:20px;font-weight:600;letter-spacing:2px;color:#94070A;display:inline-block;padding-bottom:8px;border-bottom:2px solid #C9A961">招生对象与录取标准</div>
+        <div style="font-size:10px;letter-spacing:2px;color:#6B6B6B;margin-top:8px">合作院校推荐 · 三方审核录取</div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;border-left:4px solid #94070A;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:12px">
+        <div style="display:flex;align-items:center;margin-bottom:12px">
+          <div style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, rgba(148, 7, 10, 0.1), rgba(201, 169, 97, 0.15)); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; margin-right: 12px; max-width: 100%;">🎓</div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:#94070A;letter-spacing:1.5px">招生对象</div>
+            <div style="font-family:Georgia,serif;font-size:9px;letter-spacing:2px;color:#C9A961;margin-top:2px">WHO CAN APPLY</div>
+          </div>
+        </div>
+        <div style="background:#FAF8F3;border-radius:6px;padding:12px 14px;font-size:13px;line-height:1.8;color:#1A1A1A;font-weight:500;text-align:justify">
+          具有
+          <strong style="color:#94070A;font-weight:600">合作院校正式学籍</strong>
+          的
+          <strong style="color:#94070A;font-weight:600">全日制在读生</strong>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;border-left:4px solid #94070A;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:18px">
+        <div style="display:flex;align-items:center;margin-bottom:14px">
+          <div style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, rgba(148, 7, 10, 0.1), rgba(201, 169, 97, 0.15)); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; margin-right: 12px; max-width: 100%;">✅</div>
+          <div>
+            <div style="font-size:14px;font-weight:600;color:#94070A;letter-spacing:1.5px">录取标准</div>
+            <div style="font-family:Georgia,serif;font-size:9px;letter-spacing:2px;color:#C9A961;margin-top:2px">SELECTION CRITERIA</div>
+          </div>
+        </div>
+        <div style="font-size:12.5px;line-height:1.9;color:#4A4A4A">
+          <div style="display:flex;align-items:flex-start;padding:8px 0;border-bottom:1px dashed rgba(148,7,10,0.12)">
+            <div style="width: 5px; height: 5px; border-radius: 50%; background: rgb(201, 169, 97); flex-shrink: 0; margin-top: 8px; margin-right: 10px; max-width: 100%;"></div>
+            <div style="flex:1">
+              由
+              <strong style="color:#1A1A1A;font-weight:600">合作院校负责选拔</strong>
+              品学兼优的同学
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;padding:8px 0;border-bottom:1px dashed rgba(148,7,10,0.12)">
+            <div style="width: 5px; height: 5px; border-radius: 50%; background: rgb(201, 169, 97); flex-shrink: 0; margin-top: 8px; margin-right: 10px; max-width: 100%;"></div>
+            <div style="flex:1">
+              确保选拔学生能够达到预期的
+              <strong style="color:#1A1A1A;font-weight:600">良好品德及学术标准</strong>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;padding:8px 0">
+            <div style="width: 5px; height: 5px; border-radius: 50%; background: rgb(201, 169, 97); flex-shrink: 0; margin-top: 8px; margin-right: 10px; max-width: 100%;"></div>
+            <div style="flex:1">
+              北京大学国家发展研究院负责对推荐同学进行
+              <strong style="color:#1A1A1A;font-weight:600">审核</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:22px 20px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+        <div style="text-align:center;font-size:11px;letter-spacing:4px;color:#94070A;font-weight:600;margin-bottom:6px">— 录 取 流 程 —</div>
+        <div style="position:relative">
+          <div style="display:flex;align-items:flex-start;margin-bottom:4px">
+            <div style="flex-shrink: 0; width: 36px; text-align: center; max-width: 100%;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, rgb(148, 7, 10), rgb(107, 5, 8)); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 14px; font-weight: 700; margin: 0px auto; box-shadow: rgba(148, 7, 10, 0.25) 0px 4px 12px; max-width: 100%;">1</div>
+              <div style="width: 2px; height: 36px; background: linear-gradient(rgb(201, 169, 97), rgba(201, 169, 97, 0.3)); margin: 4px auto 0px; max-width: 100%;"></div>
+            </div>
+            <div style="flex:1;padding-left:14px;padding-top:2px">
+              <div style="font-size:13px;font-weight:600;color:#1A1A1A;letter-spacing:1px;margin-bottom:4px">合作院校选拔</div>
+              <div style="font-size:12px;line-height:1.7;color:#6B6B6B">由合作院校负责选拔品学兼优的同学，确保达到预期标准</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;margin-bottom:4px">
+            <div style="flex-shrink: 0; width: 36px; text-align: center; max-width: 100%;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, rgb(148, 7, 10), rgb(107, 5, 8)); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 14px; font-weight: 700; margin: 0px auto; box-shadow: rgba(148, 7, 10, 0.25) 0px 4px 12px; max-width: 100%;">2</div>
+              <div style="width: 2px; height: 36px; background: linear-gradient(rgb(201, 169, 97), rgba(201, 169, 97, 0.3)); margin: 4px auto 0px; max-width: 100%;"></div>
+            </div>
+            <div style="flex:1;padding-left:14px;padding-top:2px">
+              <div style="font-size:13px;font-weight:600;color:#1A1A1A;letter-spacing:1px;margin-bottom:4px">国发院审核</div>
+              <div style="font-size:12px;line-height:1.7;color:#6B6B6B">北京大学国家发展研究院对合作院校推荐的同学进行审核</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start">
+            <div style="flex-shrink: 0; width: 36px; text-align: center; max-width: 100%;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, rgb(148, 7, 10), rgb(107, 5, 8)); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 14px; font-weight: 700; margin: 0px auto; box-shadow: rgba(148, 7, 10, 0.25) 0px 4px 12px; max-width: 100%;">3</div>
+            </div>
+            <div style="flex:1;padding-left:14px;padding-top:2px">
+              <div style="font-size:13px;font-weight:600;color:#1A1A1A;letter-spacing:1px;margin-bottom:4px">北大教务部终审录取</div>
+              <div style="font-size:12px;line-height:1.7;color:#6B6B6B">北京大学教务部终审后正式录取</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width:100%;background:#F2EDE3;padding:36px 18px 32px;box-sizing:border-box;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <div style="text-align:center;margin-bottom:24px">
+        <div style="font-family:Georgia,serif;font-size:10px;letter-spacing:4px;color:#C9A961;margin-bottom:6px">04 / CURRICULUM</div>
+        <div style="font-size:20px;font-weight:600;letter-spacing:2px;color:#94070A;display:inline-block;padding-bottom:8px;border-bottom:2px solid #C9A961">培养方案</div>
+        <div style="font-size:10px;letter-spacing:2px;color:#6B6B6B;margin-top:8px">学分制 · 42 学分 · 必修 + 选修</div>
+      </div>
+      <div style="background:linear-gradient(135deg,#94070A 0%,#6B0508 100%);border-radius:12px;padding:24px 20px;position:relative;overflow:hidden;box-shadow:0 12px 30px rgba(107,5,8,0.22);margin-bottom:16px">
+        <div style="position:absolute;top:-50%;right:-25%;width:80%;height:200%;border-radius:50%;background:radial-gradient(circle,rgba(201,169,97,0.4),transparent 70%)"></div>
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:24px 24px"></div>
+        <div style="position:relative;z-index:1;text-align:center">
+          <div style="font-size:10px;letter-spacing:5px;color:rgba(229,212,168,0.85);margin-bottom:8px">TOTAL CREDITS</div>
+          <div style="font-family:Georgia,serif;font-size:60px;font-weight:700;color:#FFFFFF;line-height:1;letter-spacing:2px;text-shadow:0 4px 20px rgba(0,0,0,0.4)">42</div>
+          <div style="font-size:12px;letter-spacing:4px;color:#E5D4A8;margin-top:8px">学 &nbsp;分</div>
+          <div style="width: 60px; height: 1px; background: linear-gradient(90deg, transparent, rgb(201, 169, 97), transparent); margin: 16px auto; max-width: 100%;"></div>
+          <div style="font-size:11px;letter-spacing:2px;color:rgba(255,255,255,0.8)">采用学分制 · 完成辅修培养方案</div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:16px">
+        <div style="font-size:12px;font-weight:600;color:#94070A;letter-spacing:2px;margin-bottom:14px;padding-left:10px;border-left:3px solid #C9A961">学分构成</div>
+        <div style="margin-bottom:14px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+            <div style="font-size:12px;color:#1A1A1A;font-weight:500">必修课</div>
+            <div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#94070A">
+              15 
+              <span style="font-size:11px;font-weight:500">学分</span>
+            </div>
+          </div>
+          <div style="height:8px;background:#F2EDE3;border-radius:4px;overflow:hidden">
+            <div style="width:35.7%;height:100%;background:linear-gradient(90deg,#94070A,#C9A961);border-radius:4px"></div>
+          </div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+            <div style="font-size:12px;color:#1A1A1A;font-weight:500">选修课</div>
+            <div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#94070A">
+              27 
+              <span style="font-size:11px;font-weight:500">学分</span>
+            </div>
+          </div>
+          <div style="height:8px;background:#F2EDE3;border-radius:4px;overflow:hidden">
+            <div style="width:64.3%;height:100%;background:linear-gradient(90deg,#C9A961,#E5D4A8);border-radius:4px"></div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding-top:12px;border-top:1px dashed rgba(148,7,10,0.15);font-size:11px;color:#6B6B6B;text-align:center;letter-spacing:1px">
+          必修 15 学分 &nbsp;+&nbsp; 选修 27 学分 &nbsp;=&nbsp; 合计 
+          <strong style="color:#94070A">42 学分</strong>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:16px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(148,7,10,0.1)">
+          <div style="display:flex;align-items:center">
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, rgb(148, 7, 10), rgb(107, 5, 8)); display: flex; align-items: center; justify-content: center; color: rgb(255, 255, 255); font-family: Georgia, serif; font-size: 13px; font-weight: 700; flex-shrink: 0; margin-right: 10px; max-width: 100%;">必</div>
+            <div>
+              <div style="font-size:13px;font-weight:600;color:#94070A;letter-spacing:1.5px">必修课</div>
+              <div style="font-family:Georgia,serif;font-size:9px;letter-spacing:2px;color:#C9A961;margin-top:2px">REQUIRED · 15 CREDITS</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size:12.5px;line-height:1.7;color:#4A4A4A">
+          <div style="display:flex;align-items:flex-start;padding:9px 0;border-bottom:1px dashed rgba(148,7,10,0.1)">
+            <div style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 10px; font-weight: 700; margin-right: 10px; margin-top: 1px; max-width: 100%;">1</div>
+            <div style="flex:1">
+              <strong style="color:#1A1A1A;font-weight:600">经济学原理</strong>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;padding:9px 0;border-bottom:1px dashed rgba(148,7,10,0.1)">
+            <div style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 10px; font-weight: 700; margin-right: 10px; margin-top: 1px; max-width: 100%;">2</div>
+            <div style="flex:1">
+              <strong style="color:#1A1A1A;font-weight:600">中级宏观经济学</strong>
+              <span style="color:#6B6B6B;font-size:11.5px">或 中级宏观经济学（荣誉课）</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;padding:9px 0;border-bottom:1px dashed rgba(148,7,10,0.1)">
+            <div style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 10px; font-weight: 700; margin-right: 10px; margin-top: 1px; max-width: 100%;">3</div>
+            <div style="flex:1">
+              <strong style="color:#1A1A1A;font-weight:600">中级微观经济学</strong>
+              <span style="color:#6B6B6B;font-size:11.5px">或 中级微观经济学（荣誉课）</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;padding:9px 0;border-bottom:1px dashed rgba(148,7,10,0.1)">
+            <div style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 10px; font-weight: 700; margin-right: 10px; margin-top: 1px; max-width: 100%;">4</div>
+            <div style="flex:1">
+              <strong style="color:#1A1A1A;font-weight:600">计量经济学</strong>
+              <span style="color:#6B6B6B;font-size:11.5px">或 计量经济学（荣誉课）</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;padding:9px 0">
+            <div style="flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 10px; font-weight: 700; margin-right: 10px; margin-top: 1px; max-width: 100%;">5</div>
+            <div style="flex:1">
+              <strong style="color:#1A1A1A;font-weight:600">中国经济专题</strong>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:10px 12px;background:#FAF8F3;border-radius:6px;font-size:11px;color:#6B6B6B;line-height:1.6;text-align:center">
+          💡 中级宏观、中级微观、计量经济学 均有
+          <b style="color:#94070A">荣誉课</b>
+          可选
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+        <div style="display:flex;align-items:center;margin-bottom:14px">
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, rgb(201, 169, 97), rgb(229, 212, 168)); display: flex; align-items: center; justify-content: center; color: rgb(107, 5, 8); font-family: Georgia, serif; font-size: 13px; font-weight: 700; flex-shrink: 0; margin-right: 10px; max-width: 100%;">选</div>
+          <div>
+            <div style="font-size:13px;font-weight:600;color:#94070A;letter-spacing:1.5px">选修课</div>
+            <div style="font-family:Georgia,serif;font-size:9px;letter-spacing:2px;color:#C9A961;margin-top:2px">ELECTIVE · 27 CREDITS</div>
+          </div>
+        </div>
+        <div style="background:#FAF8F3;border-radius:8px;padding:14px 16px;font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">
+          在校外辅修培养方案中
+          <strong style="color:#94070A;font-weight:600">任选</strong>
+          ，根据个人兴趣与专业方向自由组合。
+        </div>
+        <div style="margin-top:14px;display:flex;justify-content:space-around;text-align:center">
+          <div>
+            <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#94070A;line-height:1">5</div>
+            <div style="font-size:9px;color:#6B6B6B;letter-spacing:1px;margin-top:4px">必修门数</div>
+          </div>
+          <div style="width: 1px; background: rgba(148, 7, 10, 0.1); max-width: 100%;"></div>
+          <div>
+            <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#94070A;line-height:1">15</div>
+            <div style="font-size:9px;color:#6B6B6B;letter-spacing:1px;margin-top:4px">必修学分</div>
+          </div>
+          <div style="width: 1px; background: rgba(148, 7, 10, 0.1); max-width: 100%;"></div>
+          <div>
+            <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#94070A;line-height:1">27</div>
+            <div style="font-size:9px;color:#6B6B6B;letter-spacing:1px;margin-top:4px">选修学分</div>
+          </div>
+          <div style="width: 1px; background: rgba(148, 7, 10, 0.1); max-width: 100%;"></div>
+          <div>
+            <div style="font-family:Georgia,serif;font-size:22px;font-weight:700;color:#94070A;line-height:1">42</div>
+            <div style="font-size:9px;color:#6B6B6B;letter-spacing:1px;margin-top:4px">总学分</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width:100%;background:#FAF8F3;padding:32px 18px 28px;box-sizing:border-box;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <div style="text-align:center;margin-bottom:20px">
+        <div style="font-family:Georgia,serif;font-size:10px;letter-spacing:4px;color:#C9A961;margin-bottom:6px">05 / FACULTY</div>
+        <div style="font-size:20px;font-weight:600;letter-spacing:2px;color:#94070A;display:inline-block;padding-bottom:8px;border-bottom:2px solid #C9A961">师资力量</div>
+      </div>
+      <div style="background:linear-gradient(135deg,#94070A 0%,#6B0508 100%);border-radius:10px;padding:22px 20px;position:relative;overflow:hidden;box-shadow:0 10px 28px rgba(107,5,8,0.2);margin-bottom:12px">
+        <div style="position:absolute;top:-50%;right:-25%;width:80%;height:200%;border-radius:50%;background:radial-gradient(circle,rgba(201,169,97,0.4),transparent 70%)"></div>
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:24px 24px"></div>
+        <div style="position:relative;z-index:1">
+          <div style="font-size:9px;letter-spacing:4px;color:rgba(229,212,168,0.8);margin-bottom:10px">FACULTY OVERVIEW</div>
+          <div style="font-size:17px;font-weight:600;letter-spacing:1px;color:#FFFFFF;line-height:1.5;margin-bottom:14px">教研并重 · 学术引领</div>
+          <div style="width: 40px; height: 2px; background: rgb(201, 169, 97); margin-bottom: 14px; max-width: 100%;"></div>
+          <p style="margin:0;font-size:12.5px;line-height:1.95;color:rgba(255,255,255,0.92);text-align:justify">
+            学院拥有
+            <strong style="color:#E5D4A8;font-weight:600">全职教师团队</strong>
+            ，教研系列涵盖
+            <strong style="color:#E5D4A8;font-weight:600">教授、副教授、助理教授</strong>
+            完整梯队，形成结构合理的学术人才体系。
+          </p>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:16px 18px;border-left:3px solid #C9A961;box-shadow:0 4px 14px rgba(0,0,0,0.04);margin-bottom:12px">
+        <div style="display:flex;align-items:flex-start">
+          <div style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, rgba(148, 7, 10, 0.1), rgba(201, 169, 97, 0.18)); display: flex; align-items: center; justify-content: center; font-size: 17px; margin-right: 12px; max-width: 100%;">🏅</div>
+          <div style="flex:1">
+            <div style="font-size:12.5px;font-weight:600;color:#94070A;letter-spacing:1px;margin-bottom:6px">高层次人才汇聚</div>
+            <div style="font-size:12px;line-height:1.8;color:#4A4A4A;text-align:justify">
+              多位教师入选
+              <strong style="color:#1A1A1A;font-weight:600">国家高层次人才项目</strong>
+              与
+              <strong style="color:#1A1A1A;font-weight:600">北京大学博雅人才计划</strong>
+              （博雅讲席教授、博雅特聘教授、博雅青年学者），博雅人才计划入选者占全院在编教师的
+              <strong style="color:#94070A;font-weight:600">三分之一</strong>
+              。
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:16px 18px;border-left:3px solid #94070A;box-shadow:0 4px 14px rgba(0,0,0,0.04)">
+        <div style="display:flex;align-items:flex-start">
+          <div style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, rgba(148, 7, 10, 0.1), rgba(201, 169, 97, 0.18)); display: flex; align-items: center; justify-content: center; font-size: 17px; margin-right: 12px; max-width: 100%;">📖</div>
+          <div style="flex:1">
+            <div style="font-size:12.5px;font-weight:600;color:#94070A;letter-spacing:1px;margin-bottom:6px">本项目授课师资</div>
+            <div style="font-size:12px;line-height:1.8;color:#4A4A4A;text-align:justify">
+              由北京大学国家发展研究院
+              <strong style="color:#1A1A1A;font-weight:600">统一选派，</strong>
+              <strong style="color:#1A1A1A;font-weight:600">共享师资</strong>
+              ，确保课程教学质量与学术标准一致。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width:100%;background:#F2EDE3;padding:36px 18px 32px;box-sizing:border-box;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <div style="text-align:center;margin-bottom:24px">
+        <div style="font-family:Georgia,serif;font-size:10px;letter-spacing:4px;color:#C9A961;margin-bottom:6px">06 / VOICES</div>
+        <div style="font-size:20px;font-weight:600;letter-spacing:2px;color:#94070A;display:inline-block;padding-bottom:8px;border-bottom:2px solid #C9A961">往届同学反馈</div>
+        <div style="font-size:10px;letter-spacing:2px;color:#6B6B6B;margin-top:8px">来自交流同学的真诚分享</div>
+      </div>
+      <div style="background:linear-gradient(135deg,#94070A 0%,#6B0508 100%);border-radius:12px;padding:24px 20px;position:relative;overflow:hidden;box-shadow:0 12px 30px rgba(107,5,8,0.22);margin-bottom:14px">
+        <div style="position:absolute;top:-50%;right:-25%;width:80%;height:200%;border-radius:50%;background:radial-gradient(circle,rgba(201,169,97,0.4),transparent 70%)"></div>
+        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);background-size:24px 24px"></div>
+        <div style="position:relative;z-index:1">
+          <div style="font-family:Georgia,serif;font-size:56px;line-height:0.6;color:rgba(201,169,97,0.55);margin-bottom:6px">"</div>
+          <div style="font-size:9px;letter-spacing:4px;color:rgba(229,212,168,0.8);margin-bottom:10px">KEY TAKEAWAY</div>
+          <div style="font-size:16px;font-weight:600;letter-spacing:1px;color:#FFFFFF;line-height:1.6;margin-bottom:14px">
+            从"学习经济学知识"
+            <br>
+            到"用经济学思考问题"
+          </div>
+          <div style="width: 40px; height: 2px; background: rgb(201, 169, 97); margin-bottom: 12px; max-width: 100%;"></div>
+          <p style="margin:0;font-size:12.5px;line-height:1.9;color:rgba(255,255,255,0.9);text-align:justify">这是往届交流同学反馈中反复提到的重要收获。</p>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:16px 18px;border-left:3px solid #94070A;box-shadow:0 4px 14px rgba(0,0,0,0.04);margin-bottom:10px">
+        <div style="display:flex;align-items:center;margin-bottom:10px">
+          <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 12px; font-weight: 700; margin-right: 10px; max-width: 100%;">01</div>
+          <div style="font-size:13px;font-weight:600;color:#94070A;letter-spacing:1px">课程安排 · 循序渐进</div>
+        </div>
+        <p style="margin:0;font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">
+          曾参与交流的同学对课程安排、教师教学和课堂体验给予了积极评价。大家反馈，课程
+          <strong style="color:#1A1A1A;font-weight:600">循序渐进</strong>
+          ，既重视基础理论的系统学习，也关注经济发展中的现实议题，帮助他们将课堂所学与
+          <strong style="color:#1A1A1A;font-weight:600">行业趋势、社会现象</strong>
+          联系起来，让抽象的经济学概念变得更加具体、可理解。
+        </p>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:16px 18px;border-left:3px solid #94070A;box-shadow:0 4px 14px rgba(0,0,0,0.04);margin-bottom:10px">
+        <div style="display:flex;align-items:center;margin-bottom:10px">
+          <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 12px; font-weight: 700; margin-right: 10px; max-width: 100%;">02</div>
+          <div style="font-size:13px;font-weight:600;color:#94070A;letter-spacing:1px">教师教学 · 严谨而深入浅出</div>
+        </div>
+        <p style="margin:0;font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">
+          教师
+          <strong style="color:#1A1A1A;font-weight:600">严谨而深入浅出</strong>
+          的讲授，以及课堂中的
+          <strong style="color:#1A1A1A;font-weight:600">交流讨论</strong>
+          ，也给同学们留下了深刻印象。学习带来的收获，不仅在于知识的积累，更在于逐步学会从不同角度提出问题、分析问题，拓展原有专业之外的思考方式。
+        </p>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:16px 18px;border-left:3px solid #94070A;box-shadow:0 4px 14px rgba(0,0,0,0.04);margin-bottom:14px">
+        <div style="display:flex;align-items:center;margin-bottom:10px">
+          <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: rgba(148, 7, 10, 0.08); color: rgb(148, 7, 10); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 12px; font-weight: 700; margin-right: 10px; max-width: 100%;">03</div>
+          <div style="font-size:13px;font-weight:600;color:#94070A;letter-spacing:1px">学习价值 · 拓展视野</div>
+        </div>
+        <p style="margin:0;font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">
+          对于希望在本专业之外
+          <strong style="color:#1A1A1A;font-weight:600">建立经济学知识体系</strong>
+          的同学而言，这是一段拓展学术视野、丰富知识结构的学习经历，也是一次
+          <strong style="color:#1A1A1A;font-weight:600">探索未来发展方向</strong>
+          的机会。
+        </p>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;box-shadow:0 4px 14px rgba(0,0,0,0.04);text-align:center;border-top:3px solid #C9A961">
+        <div style="font-family:Georgia,serif;font-size:26px;color:#C9A961;line-height:0.6;margin-bottom:8px">✦</div>
+        <div style="font-size:12.5px;line-height:1.9;color:#4A4A4A;letter-spacing:0.5px;text-align:justify;padding:0 4px">
+          一次课堂内外的共同经历，也是
+          <strong style="color:#94070A;font-weight:600">一段值得回味的成长旅程</strong>
+          。
+        </div>
+      </div>
+    </div>
+    <div style="width:100%;background:#FAF8F3;padding:36px 18px 32px;box-sizing:border-box;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <div style="text-align:center;margin-bottom:24px">
+        <div style="font-family:Georgia,serif;font-size:10px;letter-spacing:4px;color:#C9A961;margin-bottom:6px">07 / FAQ</div>
+        <div style="font-size:20px;font-weight:600;letter-spacing:2px;color:#94070A;display:inline-block;padding-bottom:8px;border-bottom:2px solid #C9A961">常见问题</div>
+        <div style="font-size:10px;letter-spacing:2px;color:#6B6B6B;margin-top:8px">学费 · 学习方式 · 考核 · 证书</div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:12px;border-top:3px solid #94070A">
+        <div style="display:flex;align-items:flex-start;margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed rgba(148,7,10,0.15)">
+          <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, rgb(148, 7, 10), rgb(107, 5, 8)); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 13px; font-weight: 700; margin-right: 10px; max-width: 100%;">Q</div>
+          <div style="flex:1;font-size:14px;font-weight:600;color:#94070A;letter-spacing:1px;line-height:1.5;padding-top:4px">学费及缴费方式</div>
+        </div>
+        <div style="font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">
+          <p style="margin:0 0 12px 0">
+            学生于
+            <strong style="color:#1A1A1A;font-weight:600">每学期初</strong>
+            按当学期实际选课学分缴纳学费。学费按学分收取。
+          </p>
+          <div style="background:#FAF8F3;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed rgba(148,7,10,0.12)">
+              <div style="font-size:12px;color:#6B6B6B">学费标准</div>
+              <div style="font-family:Georgia,serif;font-size:16px;font-weight:700;color:#94070A">
+                1500 
+                <span style="font-family:-apple-system,sans-serif;font-size:11px;font-weight:500">元 / 学分</span>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed rgba(148,7,10,0.12)">
+              <div style="font-size:12px;color:#6B6B6B">培养方案总学分</div>
+              <div style="font-family:Georgia,serif;font-size:16px;font-weight:700;color:#94070A">
+                42 
+                <span style="font-family:-apple-system,sans-serif;font-size:11px;font-weight:500">学分</span>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0 4px">
+              <div style="font-size:12px;color:#1A1A1A;font-weight:600">费用合计</div>
+              <div style="font-family:Georgia,serif;font-size:20px;font-weight:700;color:#94070A">
+                63000 
+                <span style="font-family:-apple-system,sans-serif;font-size:11px;font-weight:500">元</span>
+              </div>
+            </div>
+          </div>
+          <p style="margin:0;font-size:11.5px;color:#6B6B6B;line-height:1.7">* 完成辅修培养方案规定的全部 42 学分，费用合计 63000 元。</p>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:12px;border-top:3px solid #94070A">
+        <div style="display:flex;align-items:flex-start;margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed rgba(148,7,10,0.15)">
+          <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, rgb(148, 7, 10), rgb(107, 5, 8)); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 13px; font-weight: 700; margin-right: 10px; max-width: 100%;">Q</div>
+          <div style="flex:1;font-size:14px;font-weight:600;color:#94070A;letter-spacing:1px;line-height:1.5;padding-top:4px">学习方式</div>
+        </div>
+        <div style="font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">
+          <div style="display:flex;align-items:flex-start;padding:7px 0;border-bottom:1px dashed rgba(148,7,10,0.1)">
+            <div style="width: 5px; height: 5px; border-radius: 50%; background: rgb(201, 169, 97); flex-shrink: 0; margin-top: 8px; margin-right: 10px; max-width: 100%;"></div>
+            <div style="flex:1">
+              课程安排在
+              <strong style="color:#1A1A1A;font-weight:600">周一至周六</strong>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;padding:7px 0;border-bottom:1px dashed rgba(148,7,10,0.1)">
+            <div style="width: 5px; height: 5px; border-radius: 50%; background: rgb(201, 169, 97); flex-shrink: 0; margin-top: 8px; margin-right: 10px; max-width: 100%;"></div>
+            <div style="flex:1">
+              学生根据培养方案及当学期课表
+              <strong style="color:#1A1A1A;font-weight:600">自主选课</strong>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;padding:7px 0;border-bottom:1px dashed rgba(148,7,10,0.1)">
+            <div style="width: 5px; height: 5px; border-radius: 50%; background: rgb(201, 169, 97); flex-shrink: 0; margin-top: 8px; margin-right: 10px; max-width: 100%;"></div>
+            <div style="flex:1">
+              按所选课程安排与
+              <strong style="color:#1A1A1A;font-weight:600">北大校内学生同班上课</strong>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;padding:7px 0">
+            <div style="width: 5px; height: 5px; border-radius: 50%; background: rgb(201, 169, 97); flex-shrink: 0; margin-top: 8px; margin-right: 10px; max-width: 100%;"></div>
+            <div style="flex:1">
+              实行
+              <strong style="color:#1A1A1A;font-weight:600">完全学分制</strong>
+              ，在合作项目规定的时限内修完要求的学分
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:12px;border-top:3px solid #94070A">
+        <div style="display:flex;align-items:flex-start;margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed rgba(148,7,10,0.15)">
+          <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, rgb(148, 7, 10), rgb(107, 5, 8)); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 13px; font-weight: 700; margin-right: 10px; max-width: 100%;">Q</div>
+          <div style="flex:1;font-size:14px;font-weight:600;color:#94070A;letter-spacing:1px;line-height:1.5;padding-top:4px">课程修习及考核</div>
+        </div>
+        <div style="font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">
+          <p style="margin:0 0 12px 0">
+            课程修习及考核工作参照
+            <strong style="color:#1A1A1A;font-weight:600">北京大学本科生相关管理文件</strong>
+            予以执行，
+            <strong style="color:#94070A;font-weight:600">不予认定</strong>
+            学生自修课程所取得的学分。
+          </p>
+          <p style="margin:0 0 12px 0">学生应当遵照本项目培养方案的要求，于北京大学校内完整完成课程教学环节，严格恪守主修院校、北京大学、国家发展研究院的全部纪律与规章制度。</p>
+          <div style="background:linear-gradient(135deg,rgba(148,7,10,0.05),rgba(201,169,97,0.08));border-radius:8px;padding:12px 14px;border-left:3px solid #94070A">
+            <div style="font-size:11px;color:#94070A;font-weight:600;letter-spacing:1px;margin-bottom:6px">⚠ 注 意 事 项</div>
+            <div style="font-size:12px;line-height:1.8;color:#4A4A4A">
+              合作项目学生在学习期间
+              <strong style="color:#94070A;font-weight:600">没有北京大学学籍</strong>
+              ，需
+              <strong style="color:#94070A;font-weight:600">自行解决食宿</strong>
+              。
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.04);border-top:3px solid #94070A">
+        <div style="display:flex;align-items:flex-start;margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed rgba(148,7,10,0.15)">
+          <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, rgb(148, 7, 10), rgb(107, 5, 8)); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 13px; font-weight: 700; margin-right: 10px; max-width: 100%;">Q</div>
+          <div style="flex:1;font-size:14px;font-weight:600;color:#94070A;letter-spacing:1px;line-height:1.5;padding-top:4px">辅修证书</div>
+        </div>
+        <div style="font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">
+          <p style="margin:0 0 14px 0">
+            修完教学计划规定的课程及学分，成绩合格，符合获得辅修毕业条件者，经北京大学国家发展研究院及北京大学教务部审查批准，授予
+            <strong style="color:#94070A;font-weight:600">由北京大学认证的辅修专业证书</strong>
+            。
+          </p>
+          <div style="background:#FAF8F3;border-radius:8px;padding:14px 16px;margin-bottom:12px">
+            <div style="font-size:11.5px;color:#94070A;font-weight:600;letter-spacing:1px;margin-bottom:10px">📋 获 证 条 件</div>
+            <div style="display:flex;align-items:flex-start;padding:5px 0;font-size:12px;line-height:1.7;color:#4A4A4A">
+              <div style="width: 5px; height: 5px; border-radius: 50%; background: rgb(201, 169, 97); flex-shrink: 0; margin-top: 7px; margin-right: 10px; max-width: 100%;"></div>
+              <div style="flex:1">修完教学计划规定的课程及学分，成绩合格</div>
+            </div>
+            <div style="display:flex;align-items:flex-start;padding:5px 0;font-size:12px;line-height:1.7;color:#4A4A4A">
+              <div style="width: 5px; height: 5px; border-radius: 50%; background: rgb(201, 169, 97); flex-shrink: 0; margin-top: 7px; margin-right: 10px; max-width: 100%;"></div>
+              <div style="flex:1">
+                凭已获得的
+                <strong style="color:#1A1A1A;font-weight:600">国家承认的全日制本科第一学士学位毕业证书及学位证书</strong>
+                （或教育部留学服务中心认证的境外本科第一学士学位证书）
+              </div>
+            </div>
+          </div>
+          <div style="background:linear-gradient(135deg,rgba(148,7,10,0.05),rgba(201,169,97,0.08));border-radius:8px;padding:12px 14px;border-left:3px solid #C9A961">
+            <div style="font-size:11px;color:#94070A;font-weight:600;letter-spacing:1px;margin-bottom:8px">🔍 证 书 验 证</div>
+            <div style="display:flex;align-items:center;padding:5px 0;font-size:12px;line-height:1.7">
+              <div style="width: 14px; height: 14px; border-radius: 50%; background: rgb(74, 255, 136); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; flex-shrink: 0; margin-right: 10px; max-width: 100%;">✓</div>
+              <div style="flex:1;color:#4A4A4A">
+                可在
+                <strong style="color:#94070A;font-weight:600">北京大学教务部</strong>
+                查询与验证
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;padding:5px 0;font-size:12px;line-height:1.7">
+              <div style="width: 14px; height: 14px; border-radius: 50%; background: rgb(217, 83, 79); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; flex-shrink: 0; margin-right: 10px; max-width: 100%;">✕</div>
+              <div style="flex:1;color:#4A4A4A">
+                无法在
+                <strong style="color:#94070A;font-weight:600">学信网</strong>
+                上查询与验证
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width:100%;background:#F2EDE3;padding:36px 18px 32px;box-sizing:border-box;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <div style="text-align:center;margin-bottom:24px">
+        <div style="font-family:Georgia,serif;font-size:10px;letter-spacing:4px;color:#C9A961;margin-bottom:6px">08 / APPLY</div>
+        <div style="font-size:20px;font-weight:600;letter-spacing:2px;color:#94070A;display:inline-block;padding-bottom:8px;border-bottom:2px solid #C9A961">报名方式与招生咨询</div>
+        <div style="font-size:10px;letter-spacing:2px;color:#6B6B6B;margin-top:8px">双重报名 · 两方咨询</div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:14px;border-top:3px solid #94070A">
+        <div style="display:flex;align-items:center;margin-bottom:14px;padding-bottom:12px;border-bottom:1px dashed rgba(148,7,10,0.15)">
+          <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, rgb(148, 7, 10), rgb(107, 5, 8)); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 13px; font-weight: 700; margin-right: 10px; max-width: 100%;">一</div>
+          <div style="flex:1;font-size:14px;font-weight:600;color:#94070A;letter-spacing:1px">报 名 方 式</div>
+        </div>
+        <p style="margin:0 0 14px 0;font-size:12.5px;line-height:1.9;color:#4A4A4A;text-align:justify">
+          满足国发院合作项目要求的同学，需在
+          <strong style="color:#1A1A1A;font-weight:600">规定的时间内</strong>
+          分别在
+          <strong style="color:#94070A;font-weight:600">合作院校</strong>
+          及
+          <strong style="color:#94070A;font-weight:600">国发院</strong>
+          报名。
+        </p>
+        <div style="display:flex;justify-content:space-between;align-items:stretch;margin-bottom:16px;gap:8px">
+          <div style="flex:1;background:#FAF8F3;border-radius:8px;padding:12px 10px;text-align:center;border:1px solid rgba(148,7,10,0.1)">
+            <div style="font-size:20px;margin-bottom:6px">🏛️</div>
+            <div style="font-size:11px;color:#94070A;font-weight:600;letter-spacing:1px;margin-bottom:4px">合作院校报名</div>
+            <div style="font-size:10px;color:#6B6B6B;line-height:1.5">咨询本人所在院校</div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 20px; max-width: 100%;">
+            <div style="font-size:18px;color:#C9A961;font-weight:700">+</div>
+          </div>
+          <div style="flex:1;background:#FAF8F3;border-radius:8px;padding:12px 10px;text-align:center;border:1px solid rgba(148,7,10,0.1)">
+            <div style="font-size:20px;margin-bottom:6px">🎓</div>
+            <div style="font-size:11px;color:#94070A;font-weight:600;letter-spacing:1px;margin-bottom:4px">国发院报名</div>
+            <div style="font-size:10px;color:#6B6B6B;line-height:1.5">填写线上报名表</div>
+          </div>
+        </div>
+        <div style="background:linear-gradient(135deg,#94070A 0%,#6B0508 100%);border-radius:10px;padding:16px 18px;position:relative;overflow:hidden;margin-bottom:12px">
+          <div style="position:absolute;top:-50%;right:-30%;width:70%;height:180%;border-radius:50%;background:radial-gradient(circle,rgba(201,169,97,0.35),transparent 70%)"></div>
+          <div style="position:relative;z-index:1">
+            <div style="font-size:10px;letter-spacing:3px;color:rgba(229,212,168,0.85);margin-bottom:8px">国 发 院 报 名 链 接</div>
+            <a href="https://pkunsd.wjx.cn/vm/tAQBGXf.aspx" target="_blank" style="display:block;background:#FFFFFF;border-radius:8px;padding:14px 18px;text-decoration:none;text-align:center;margin-bottom:10px;box-shadow:0 4px 12px rgba(0,0,0,0.15)" rel="noopener noreferrer" referrerpolicy="no-referrer">
+              <div style="font-size:12px;color:#94070A;font-weight:600;letter-spacing:1px">🔗 点击进入报名页面</div>
+              <div style="font-size:10px;color:#6B6B6B;margin-top:4px;word-break:break-all;line-height:1.4">pkunsd.wjx.cn/vm/tAQBGXf.aspx</div>
+            </a>
+            <div style="font-size:10px;color:rgba(255,255,255,0.7);text-align:center;line-height:1.5">或复制链接至浏览器打开</div>
+          </div>
+        </div>
+        <div style="background:#FFFFFF;border-radius:8px;padding:14px 18px;border:2px solid #94070A;text-align:center">
+          <div style="font-size:10px;letter-spacing:3px;color:#94070A;font-weight:600;margin-bottom:6px">⏰ 报 名 截 止 时 间</div>
+          <div style="font-family:Georgia,serif;font-size:20px;font-weight:700;color:#94070A;letter-spacing:1px;line-height:1.3">2027年5月11日</div>
+          <div style="font-size:12px;color:#4A4A4A;margin-top:4px;letter-spacing:1px">周二 上午 9:00</div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border-radius:10px;padding:18px 20px;box-shadow:0 6px 18px rgba(0,0,0,0.04);border-top:3px solid #94070A">
+        <div style="display:flex;align-items:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px dashed rgba(148,7,10,0.15)">
+          <div style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, rgb(148, 7, 10), rgb(107, 5, 8)); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 13px; font-weight: 700; margin-right: 10px; max-width: 100%;">二</div>
+          <div style="flex:1;font-size:14px;font-weight:600;color:#94070A;letter-spacing:1px">招 生 咨 询</div>
+        </div>
+        <div style="background:#FAF8F3;border-radius:8px;padding:14px 16px;margin-bottom:12px;border-left:3px solid #C9A961">
+          <div style="display:flex;align-items:center;margin-bottom:8px">
+            <div style="font-size:16px;margin-right:8px">📌</div>
+            <div style="font-size:12.5px;font-weight:600;color:#94070A;letter-spacing:0.5px">申请条件及选拔相关事宜</div>
+          </div>
+          <div style="font-size:12px;line-height:1.8;color:#4A4A4A;text-align:justify">
+            请有意向的同学咨询
+            <strong style="color:#1A1A1A;font-weight:600">本人所在院校</strong>
+            ；咨询联络渠道由各合作院校另行发布通知。
+          </div>
+        </div>
+        <div style="background:#FAF8F3;border-radius:8px;padding:14px 16px;margin-bottom:16px;border-left:3px solid #94070A">
+          <div style="display:flex;align-items:center;margin-bottom:10px">
+            <div style="font-size:16px;margin-right:8px">🎓</div>
+            <div style="font-size:12.5px;font-weight:600;color:#94070A;letter-spacing:0.5px">项目就读相关事宜</div>
+          </div>
+          <div style="font-size:12px;line-height:1.8;color:#4A4A4A;text-align:justify;margin-bottom:12px">
+            欢迎咨询
+            <strong style="color:#1A1A1A;font-weight:600">北京大学国家发展研究院</strong>
+            。
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <a href="https://nsd.pku.edu.cn/" target="_blank" style="display:flex;align-items:center;background:#FFFFFF;border-radius:8px;padding:12px 14px;text-decoration:none;border:1px solid rgba(148,7,10,0.12)" rel="noopener noreferrer" referrerpolicy="no-referrer">
+              <div style="flex-shrink: 0; width: 34px; height: 34px; border-radius: 8px; background: linear-gradient(135deg, rgba(148, 7, 10, 0.08), rgba(201, 169, 97, 0.15)); display: flex; align-items: center; justify-content: center; font-size: 15px; margin-right: 12px; max-width: 100%;">🌐</div>
+              <div style="flex:1">
+                <div style="font-size:10px;color:#6B6B6B;letter-spacing:1px;margin-bottom:2px">国 发 院 官 网</div>
+                <div style="font-size:11.5px;color:#94070A;font-weight:500;word-break:break-all">nsd.pku.edu.cn</div>
+              </div>
+              <div style="font-size:14px;color:#C9A961;flex-shrink:0">›</div>
+            </a>
+            <div style="display:flex;align-items:center;background:#FFFFFF;border-radius:8px;padding:12px 14px;border:1px solid rgba(148,7,10,0.12)">
+              <div style="flex-shrink: 0; width: 34px; height: 34px; border-radius: 8px; background: linear-gradient(135deg, rgba(148, 7, 10, 0.08), rgba(201, 169, 97, 0.15)); display: flex; align-items: center; justify-content: center; font-size: 15px; margin-right: 12px; max-width: 100%;">📞</div>
+              <div style="flex:1">
+                <div style="font-size:10px;color:#6B6B6B;letter-spacing:1px;margin-bottom:2px">招 生 咨 询 电 话</div>
+                <div style="font-size:12px;color:#1A1A1A;font-weight:600;letter-spacing:0.5px">（010）6275-3082 &nbsp;/&nbsp; 6275-8978</div>
+                <div style="font-size:10px;color:#6B6B6B;margin-top:4px;line-height:1.5">
+                  北大校历工作日 9:00–11:00 / 14:00–17:00
+                  <br>
+                  来电请说明 2027 年校外经济学合作项目咨询
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;background:#FFFFFF;border-radius:8px;padding:12px 14px;border:1px solid rgba(148,7,10,0.12)">
+              <div style="flex-shrink: 0; width: 34px; height: 34px; border-radius: 8px; background: linear-gradient(135deg, rgba(148, 7, 10, 0.08), rgba(201, 169, 97, 0.15)); display: flex; align-items: center; justify-content: center; font-size: 15px; margin-right: 12px; max-width: 100%;">✉️</div>
+              <div style="flex:1">
+                <div style="font-size:10px;color:#6B6B6B;letter-spacing:1px;margin-bottom:2px">国 发 院 电 子 邮 件</div>
+                <div style="font-size:11.5px;color:#94070A;font-weight:500;word-break:break-all">nsdtp@nsd.pku.edu.cn</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;padding-top:14px;border-top:1px dashed rgba(148,7,10,0.15)">
+          <div style="font-family:Georgia,serif;font-size:20px;color:#C9A961;line-height:0.6;margin-bottom:6px">✦</div>
+          <div style="font-size:11.5px;color:#6B6B6B;letter-spacing:1px;line-height:1.7">期待与你在北大相遇</div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== 原始内容结束 ========== -->
+  </div>
+</body>
+</html>
